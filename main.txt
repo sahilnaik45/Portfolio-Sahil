@@ -1,0 +1,11 @@
+portfolio/
+├── index.html
+├── css/
+│   ├── style.css
+│   └── animations.css
+├── js/
+│   ├── main.js
+│   ├── darkmode.js
+│   └── formHandler.js
+├── images/
+└── assets/

@@ -1,0 +1,147 @@
+/* Scroll Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.6s ease;
+}
+
+[data-aos="fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.6s ease;
+}
+
+[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.6s ease;
+}
+
+[data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="flip-left"] {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-90deg);
+    transition: all 0.6s ease;
+    transform-origin: left center;
+}
+
+[data-aos="flip-left"].aos-animate {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0);
+}
+
+/* 3D Card Hover Effects */
+.card-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow Effects */
+.glow-on-hover {
+    position: relative;
+    z-index: 1;
+}
+
+.glow-on-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(99, 102, 241, 0.3), rgba(16, 185, 129, 0.3));
+    filter: blur(10px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glow-on-hover:hover::before {
+    opacity: 1;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Custom Cursor Effects (optional) */
+/* Uncomment if you want custom cursor effects
+body {
+    cursor: url('assets/cursor-default.png'), auto;
+}
+
+a, button {
+    cursor: url('assets/cursor-pointer.png'), pointer;
+}
+*/
